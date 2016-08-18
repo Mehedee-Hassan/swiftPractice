@@ -164,7 +164,38 @@ testReturn();
 //array ==
 
 
-let thisIsArray = ["asdf","dfs","32"];
+var thisIsArray = ["asdf","dfs","32"];
+
+
+thisIsArray.count
+thisIsArray[0]
+thisIsArray[1]
+
+thisIsArray.append("test");
+thisIsArray.insert("inserted", atIndex: 2);
+
+
+for a in 0 ..< thisIsArray.count{
+    print (a);
+    print(thisIsArray[a]);
+}
+
+
+
+// dictionary
+
+var testDictionary = ["1" : "aa" ,"2":"bb" ,"3":"cc"];
+
+var testDictionary2 : [Int:String];
+
+
+print(testDictionary["2"]);
+
+testDictionary["4"] = "dd";
+testDictionary.updateValue("5", forKey: "5");
+
+
+
 
 
 
