@@ -194,12 +194,40 @@ print(testDictionary["2"]);
 testDictionary["4"] = "dd";
 testDictionary.updateValue("5", forKey: "5");
 
+for (key ,value) in testDictionary {
+    print("key = \(key) ; value \(value)");
+}
+
+
+// tuples
+
+
+var str5 = "Hello";
+let num = 1000;
+
+var testTuple = (str5 ,num);
+var testTuple2 = (testTuple ,"kk",20390);
+
+
+// returning
+func getCurrentSongAndDuration() -> (name : String , length: Int){
+    
+    return ("A monster" ,3);
+    
+}
+
+var testFunctionSong  = getCurrentSongAndDuration();
 
 
 
+print("The sog is \(testFunctionSong.0) and it's length \(testFunctionSong.1) seconds long");
+
+
+print("The sog is \(testFunctionSong.name) and it's length \(testFunctionSong.length) seconds long");
 
 
 
+let (songName ,songLength) = getCurrentSongAndDuration();
 
 
 
