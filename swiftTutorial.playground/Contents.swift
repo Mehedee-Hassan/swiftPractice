@@ -4,6 +4,8 @@
 //(1) constant amount of space sould be placed before and after '='
 //(2) parenthesis optional
 //(3) semicolons are optional
+//(4) int type is not boolean
+
 
 import UIKit
 
@@ -68,6 +70,101 @@ if(myVar2 < 30){
 
 
 
+//if(0) // will not work
+
+if (0 == 0){
+    
+    print(" 0 == 0");
+}else {
+    
+    print("0 passed as false");
+}
+
+// == switch case == //
+
+
+let aForTestInSwitch : Int = 9;
+
+
+
+
+switch (aForTestInSwitch){
+    
+case 1...2:
+    print("this is false");
+    break;
+    
+case 3...10:
+    print("this is true");
+    break;
+    
+    
+default:
+    print("this is default");
+    
+    
+}
+
+
+// == loop == //
+
+var total : Int = 0;
+for test in 1..<10{
+    
+    total += test;
+    print(test);
+}
+
+print("The total is \(total)");
+
+
+
+var str4 = "bob";
+
+for  char in str4.characters {
+    print(char);
+}
+
+
+// function //
+
+func myFunction(){
+    print("test function");
+}
+
+
+func testFunction(name : String = "mhr" ,age : Int, bAcc : String){
+    
+    //age ++; //parameters are constant
+    
+    
+    print("name is \(name) and i'm \(age)");
+}
+
+
+testFunction( "Mehedee" ,age: 24 , bAcc: "asdf324");
+
+
+
+
+// === function return == //
+
+
+func testReturn() -> String {
+    return "Mehedee";
+}
+
+
+testReturn();
+
+
+// === collection == //
+
+
+//array ==
+
+
+let thisIsArray = ["asdf","dfs","32"];
 
 
 
