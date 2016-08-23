@@ -233,7 +233,58 @@ let (songName ,songLength) = getCurrentSongAndDuration();
 
 
 
+//==== optional 
 
+
+var temperature : Int?
+
+temperature = 10;
+
+if(temperature != nil){
+    
+    print("this temp : \(temperature!)"); // forced unwrapping
+    
+    
+}
+
+
+
+// == enum ==
+
+enum TestEnum{
+    case a
+    case b
+    case c
+    case no
+}
+
+var testEnum : TestEnum;
+
+testEnum = .a;
+testEnum = TestEnum.b;
+
+
+
+
+
+//=== closuer ==//
+
+let myClosure = {
+    print("test closure");
+}
+
+func testClosureTimes(myClosureParam : ()->()){
+    for i in 1...5 {
+        myClosureParam();
+    }
+}
+
+
+testClosureTimes(myClosure);
+
+testClosureTimes({
+    print("test closure");
+});
 
 
 
