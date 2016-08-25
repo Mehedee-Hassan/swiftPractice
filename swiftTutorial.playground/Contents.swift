@@ -286,6 +286,28 @@ testClosureTimes({
     print("test closure");
 });
 
+// =====class
+
+class TestClass{
+    
+    var name:String = "";
+    var score:Int = 0;
+    
+    
+    func description()-> String{
+        return ("Player \(name) scored \(score)");
+    }
+    
+}
+
+
+
+var testInstant = TestClass();
+testInstant.name = "Mehedee";
+testInstant.score = 100;
+
+print(testInstant.description());
+
 
 
 
