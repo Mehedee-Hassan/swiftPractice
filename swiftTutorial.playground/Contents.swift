@@ -298,15 +298,28 @@ class TestClass{
         return ("Player \(name) scored \(score)");
     }
     
+
+    init(){
+        name = "Test Name";
+        score = 0;
+    }
+    
+    init(name : String){
+        self.name = name;
+        self.score = 0;
+    }
 }
 
 
 
 var testInstant = TestClass();
-testInstant.name = "Mehedee";
-testInstant.score = 100;
+//testInstant.name = "Mehedee";
+//testInstant.score = 100;
 
 print(testInstant.description());
+
+
+
 
 
 
