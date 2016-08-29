@@ -298,6 +298,10 @@ class TestClass{
         return ("Player \(name) scored \(score)");
     }
     
+    
+    final func cannotOverride() -> String {
+        return ("could not override");
+    }
 
     init(){
         name = "Test Name";
@@ -311,12 +315,68 @@ class TestClass{
 }
 
 
+class TestInheri : TestClass{
+    
+    var testProp : String;
+    
+    override init(){
+        self.testProp = "test prop";
+        super.init();
+        
+    }
+    
+    override func description() -> String {
+    
+        return ("\(super.description()) and test prop \(testProp)")
+    
+    }
+    
+}
 
-var testInstant = TestClass();
+
+var testInstant = TestInheri();
 //testInstant.name = "Mehedee";
 //testInstant.score = 100;
 
 print(testInstant.description());
+
+
+// computed property
+
+
+
+import Foundation;
+
+class Person{
+    var firstName : String ;
+    var lastName : String ;
+    
+    var fullName : String {
+        get{
+            return firstName+" "+lastName;
+        }
+        
+        set{
+            var nameArray = newValue.componentsSeparatedByString(" ");
+            firstName = nameArray[0];
+            lastName = nameArray[1];
+        }
+    };
+    
+    
+    init(first : String ,last : String)
+    {
+        self.firstName = first;
+        self.lastName = last;
+    }
+    
+}
+
+var testPerson = Person(first: "Mehedee" ,last: "Hassan");
+
+print(testPerson.fullName);
+
+
 
 
 
