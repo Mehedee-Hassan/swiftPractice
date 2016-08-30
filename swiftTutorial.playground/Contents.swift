@@ -379,7 +379,59 @@ print(testPerson.fullName);
 
 
 
+// type property and type method
 
+
+class BankAccount{
+    
+    let accountNumber : Int;
+    let routingCode  = 12345678;
+    var balance : Double;
+    
+    class var interest : Float{
+        return 2.0;
+    }
+    
+    
+    
+    init(num: Int ,initialBalance : Double){
+        self.accountNumber = num;
+        self.balance = initialBalance;
+    }
+    
+    
+    func deposit(amount : Double)->Void {
+        balance += amount;
+    }
+    
+    
+    func withdraw(amount : Double) -> Bool {
+        
+        if balance > amount {
+            balance -= amount;
+            return (true);
+        }
+        else {
+            print("not enough balance");
+            return false;
+        }
+        
+        
+        
+    }
+    
+    
+    
+}
+
+
+var firstAccount = BankAccount(num: 1213213 , initialBalance: 1000);
+var secondAccount = BankAccount(num: 34324 ,initialBalance: 23423);
+
+
+firstAccount.deposit(3243.3);
+
+BankAccount.interest
 
 
 
